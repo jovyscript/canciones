@@ -13,7 +13,7 @@
 	<div class="container">
         <h1>🎶 ${cancion.titulo}</h1>
         
-        <p><strong>Artista:</strong> <c:out value="${cancion.artista}"/></p>
+        <p><strong>Artista:</strong> <c:out value="${cancion.artista.nombre} ${cancion.artista.apellido}"/></p>
         <p><strong>Álbum:</strong> <c:out value="${cancion.album}"/></p>
         <p><strong>Género:</strong> <c:out value="${cancion.genero}"/></p>
         <p><strong>Idioma:</strong> <c:out value="${cancion.idioma}"/></p>

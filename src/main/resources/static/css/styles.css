@@ -1,13 +1,5 @@
 @charset "UTF-8";
 /* Paleta de Colores y Fuente Global */
-:root {
-    --primary-color: #6c5ce7; /* Violeta moderno */
-    --secondary-color: #a29bfe;
-    --background-color: #dfe6e9;
-    --text-color: #2d3436;
-    --danger-color: #d63031; /* Rojo para eliminar */
-    --white: #ffffff;
-}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -94,6 +86,23 @@ h1 {
 
 .btn-danger:hover {
     background-color: #c0392b;
+}
+
+.btn-secundario {
+	display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+	background-color: #ada0f1; 
+	color: #333;	
+	text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.btn-secundario:hover {
+    background-color: #7d77b3;
 }
 
 /* Estilos para Formularios */

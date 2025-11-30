@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.jovellypino.modelos.Cancion;
+import com.jovellypino.servicios.ServicioArtistas;
 import com.jovellypino.servicios.ServicioCanciones;
 
 import jakarta.validation.Valid;
@@ -21,6 +22,9 @@ public class ControladorCanciones {
 
     @Autowired
     private ServicioCanciones servicioCanciones;
+    
+    @Autowired
+    private ServicioArtistas servicioArtistas;    
     
     @GetMapping("/canciones")
     public String desplegarCanciones(Model modelo) {
@@ -45,14 +49,19 @@ public class ControladorCanciones {
     @GetMapping("/canciones/formulario/agregar")
     public String formAgregarCancion(Model modelo) {
     	modelo.addAttribute("cancion", new Cancion());
+    	//Envia la lista para el select
+    	modelo.addAttribute("listaArtistas", servicioArtistas.obtenerTodosLosArtistas());
     	return "agregarCancion";
     }
     
     //Ruta para procesar el formulario y agregar cancion
     @PostMapping("/canciones/procesa/agregar")
     public String procesarAgregarCancion(@Valid @ModelAttribute("cancion") Cancion cancion,
-    									BindingResult result) {
+    									BindingResult result, 
+    									Model modelo) {//Se agrega Model por si hay error
     	if (result.hasErrors()) {
+    		// Si falla, hay que volver a enviar la lista de artistas
+    		modelo.addAttribute("listaArtistas", servicioArtistas.obtenerTodosLosArtistas());
     		return "agregarCancion";
     	}
     	//Si no hay errores, guarda y redirige a la lista

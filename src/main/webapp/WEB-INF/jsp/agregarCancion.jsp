@@ -21,9 +21,12 @@
             <form:errors path="titulo" class="error"/>
         </div>
 
-        <div class="form-group">
-            <form:label path="artista">Artista:</form:label>
-            <form:input path="artista"/>
+		<div class="form-group">
+            <label>Artista:</label>
+            <form:select path="artista.id" cssClass="form-control">
+                <form:option value="" label="--Selecciona un Artista--"/>
+                <form:options items="${listaArtistas}" itemValue="id" itemLabel="nombre"/>
+            </form:select>
             <form:errors path="artista" class="error"/>
         </div>
 

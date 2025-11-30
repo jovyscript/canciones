@@ -25,7 +25,7 @@
             <c:forEach items="${canciones}" var="cancion">
             <tr>
                 <td><c:out value="${cancion.titulo}"/></td>
-                <td><c:out value="${cancion.artista}"/></td>
+                <td><c:out value="${cancion.artista.nombre}"/> <c:out value="${cancion.artista.apellido}"/></td>
                 <td>
                     <a href="/canciones/detalle/${cancion.id}" class="btn">Detalle</a>
                 </td>
@@ -34,9 +34,12 @@
         </tbody>
     </table>
     <br>
-	<div style="text-align: center;">
+		<div style="text-align: center;">
             <a href="/canciones/formulario/agregar" class="btn">Agregar Nueva Canción</a>
         </div>
+        <div style="text-align: center; margin-top: 10px;">
+    		<a href="/artistas" class="btn-secundario">Ir a Artistas</a>
+		</div>
 </div>    
 </body>
 </html>
