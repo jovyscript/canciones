@@ -1,0 +1,128 @@
+@charset "UTF-8";
+/* Paleta de Colores y Fuente Global */
+:root {
+    --primary-color: #6c5ce7; /* Violeta moderno */
+    --secondary-color: #a29bfe;
+    --background-color: #dfe6e9;
+    --text-color: #2d3436;
+    --danger-color: #d63031; /* Rojo para eliminar */
+    --white: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dfe6e9;
+    color: #2d3436;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Contenedor Principal (Tarjeta blanca) */
+.container {
+    max-width: 800px;
+    margin: 0 auto; /* Centrar en pantalla */
+    background-color: ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #ada0f1;
+}
+
+h1 {
+    text-align: center;
+    color: #6c5ce7;
+    margin-bottom: 30px;
+}
+
+/* Estilos de la Tabla */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.styled-table thead tr {
+    background-color: #6c5ce7;
+    color: var(--white);
+    text-align: left;
+}
+
+.styled-table th, .styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #6c5ce7;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f1f2f6;
+    cursor: default;
+}
+
+/* Botones y Enlaces */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c5ce7;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #5649c0;
+}
+
+.btn-danger {
+    background-color: #d63031;
+}
+
+.btn-danger:hover {
+    background-color: #c0392b;
+}
+
+/* Estilos para Formularios */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+input[type="text"]:focus {
+    border-color: #6c5ce7;
+    outline: none;
+}
+
+.error {
+    color: #d63031;
+    font-size: 0.85em;
+    margin-top: 5px;
+    display: block;
+}

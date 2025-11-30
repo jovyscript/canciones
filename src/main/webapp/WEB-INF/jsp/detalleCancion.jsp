@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Detalle de Canción</title>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 	<div class="container">
@@ -27,12 +28,16 @@
         
         <p>
             <a href="/canciones/formulario/editar/${cancion.id}">
-                <button>Editar esta canción</button>
+                <button class="btn">Editar esta canción</button>
             </a>
         </p>
-        
+        <form action="/canciones/eliminar/${cancion.id}" method="post">
+            <input type="hidden" name="_method" value="delete">
+            
+            <button type="submit" class="btn btn-danger">Eliminar Canción</button>
+        </form>
         <p>
-            <a href="/canciones">Volver a lista de canciones</a>
+            <a href="/canciones" class="btn">Volver a lista de canciones</a>
         </p>
     </div>
 </body>

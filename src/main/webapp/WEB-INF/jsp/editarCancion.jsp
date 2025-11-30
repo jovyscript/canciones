@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Editar Canción</title>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
 	<h1>Editar Canción: ${cancion.titulo}</h1>
@@ -43,10 +44,10 @@
             <form:errors path="idioma" class="error"/>
         </div>
 
-        <input type="submit" value="Actualizar Canción"/>
+        <input type="submit" value="Actualizar Canción" class="btn"/>
     </form:form>
 
     <br>
-    <a href="/canciones">Volver a lista de canciones</a>
+    <a href="/canciones" class="btn">Volver a lista de canciones</a>
 </body>
 </html>

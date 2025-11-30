@@ -7,11 +7,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Lista de Canciones</title>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<h1>Todas las Canciones</h1>
+<div class= "container">
+	<h1>🎤 Todas las Canciones</h1>
     
-    <table>
+    <table class="styled-table">
         <thead>
             <tr>
                 <th>Título</th>
@@ -25,14 +27,16 @@
                 <td><c:out value="${cancion.titulo}"/></td>
                 <td><c:out value="${cancion.artista}"/></td>
                 <td>
-                    <a href="/canciones/detalle/${cancion.id}">Detalle</a>
+                    <a href="/canciones/detalle/${cancion.id}" class="btn">Detalle</a>
                 </td>
             </tr>
             </c:forEach>
         </tbody>
     </table>
-    <a href="/canciones/formulario/agregar">
-        <button>Agregar Nueva Canción</button>
-    </a>
+    <br>
+	<div style="text-align: center;">
+            <a href="/canciones/formulario/agregar" class="btn">Agregar Nueva Canción</a>
+        </div>
+</div>    
 </body>
 </html>

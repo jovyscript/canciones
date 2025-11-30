@@ -7,8 +7,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Agregar Canción</title>
+<link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+<div class="container">
 	<h1>🎵 Agregar Nueva Canción</h1>
 
     <form:form action="/canciones/procesa/agregar" method="post" modelAttribute="cancion">
@@ -43,10 +45,11 @@
             <form:errors path="idioma" class="error"/>
         </div>
 
-        <input type="submit" value="Guardar Canción"/>
+        <input type="submit" value="Guardar Canción" class="btn"/>
     </form:form>
 
     <br>
-    <a href="/canciones">Volver a lista de canciones</a>
+    <a href="/canciones" class="btn">Volver a lista de canciones</a>
+</div>    
 </body>
 </html>
