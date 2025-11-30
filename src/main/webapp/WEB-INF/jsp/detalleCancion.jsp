@@ -26,6 +26,12 @@
         <hr>
         
         <p>
+            <a href="/canciones/formulario/editar/${cancion.id}">
+                <button>Editar esta canción</button>
+            </a>
+        </p>
+        
+        <p>
             <a href="/canciones">Volver a lista de canciones</a>
         </p>
     </div>
